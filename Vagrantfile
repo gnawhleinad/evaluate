@@ -10,6 +10,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.network "forwarded_port", guest: 3000, host: 3000
   config.vm.provision "shell" do |s|
     s.path = "scripts/vagrant-provision.sh"
-    s.args = ["docker"]
+    s.args = ["docker", "node-onbuild"]
   end
 end

@@ -4,7 +4,7 @@ A Node.js application for remote relevance evaluation via QnA.
 ## Prerequisites
 - [vagrant](http://www.vagrantup.com/downloads.html)
 
-Start the virtual machine with [`node:onbuild`](https://github.com/joyent/docker-node) ([Docker](https://www.docker.com/)) by running:
+Start the virtual machine with [Docker](https://www.docker.com/) by running:
 
 ```bash
 $ vagrant up
