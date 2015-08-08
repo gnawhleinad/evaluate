@@ -107,4 +107,4 @@ app.post('/api/relevance/evaluate', function(req, res) {
   });
 });
 
-app.listen(process.env.PORT);
+app.listen(process.env.PORT || 3000);
