@@ -2,8 +2,6 @@
 
 # https://docs.docker.com/installation/centos/
 
-sudo yum update -y
-
 cat >/etc/yum.repos.d/docker.repo << OHANA
 [docker]
 name=Docker
