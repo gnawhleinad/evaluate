@@ -2,6 +2,8 @@
 
 # https://docs.docker.com/installation/centos/
 
+sudo yum update -y
+
 cat >/etc/yum.repos.d/docker.repo << OHANA
 [docker]
 name=Docker
@@ -12,8 +14,8 @@ gpgkey=https://yum.dockerproject.org/gpg
 OHANA
 
 sudo yum install -y docker-engine
-sudo service docker start
+sudo systemctl start docker
 
 sudo usermod -aG docker vagrant
 
-sudo chkconfig docker on
+sudo systemctl enable docker
