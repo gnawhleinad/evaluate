@@ -26,5 +26,5 @@ Relevance evaluation is available:
 $ curl 'http://127.0.0.1:3000/api/relevance/evaluate' \
 	-H 'Content-Type: application/json' \
 	--data-binary '{"relevance":"name of operating system"}'
-{"answers":["Linux Red Hat 4.8.2-16"],"errors":[],"time":123,"type":"string"}
+{"answers":["Linux CentOS 7.1.1503"],"errors":[],"time":123,"type":"string"}
 ```
