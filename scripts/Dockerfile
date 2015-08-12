@@ -1,5 +1,7 @@
 FROM centos:7
 
+RUN useradd -m bigfix
+
 # https://github.com/joyent/docker-node/blob/master/0.12/Dockerfile
 
 RUN set -ex \
@@ -25,7 +27,10 @@ RUN curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-
 # https://github.com/joyent/docker-node/blob/master/0.12/onbuild/Dockerfile
 
 RUN mkdir -p /usr/src/app
+RUN chown bigfix:bigfix /usr/src/app
 WORKDIR /usr/src/app
+
+USER bigfix
 
 ONBUILD COPY package.json /usr/src/app/
 ONBUILD RUN npm install
